@@ -15,9 +15,9 @@
 
   function updateProgress() {
     if (!progressBar) return;
-    var scrollTop  = window.scrollY || document.documentElement.scrollTop;
-    var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
-    var progress   = docHeight > 0 ? scrollTop / docHeight : 0;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = docHeight > 0 ? scrollTop / docHeight : 0;
     progressBar.style.transform = 'scaleX(' + progress + ')';
   }
 
@@ -45,7 +45,7 @@
      MOBILE NAVIGATION
      ================================================================ */
   var toggle = document.querySelector('.nav-toggle');
-  var menu   = document.getElementById('mobile-menu');
+  var menu = document.getElementById('mobile-menu');
 
   if (toggle && menu) {
     toggle.addEventListener('click', function () {
@@ -80,8 +80,8 @@
 
     revealEls.forEach(function (el, i) {
       // Stagger: siblings in same parent get incremental delay
-      var siblings  = Array.prototype.slice.call(el.parentNode.children);
-      var idx       = siblings.filter(function (s) { return s.classList.contains('reveal'); }).indexOf(el);
+      var siblings = Array.prototype.slice.call(el.parentNode.children);
+      var idx = siblings.filter(function (s) { return s.classList.contains('reveal'); }).indexOf(el);
       if (idx > 0) {
         el.style.transitionDelay = Math.min(idx * 80, 400) + 'ms';
       }
@@ -93,10 +93,10 @@
      HERO ENTRANCE ANIMATIONS
      ================================================================ */
   var heroEyebrow = document.querySelector('.hero__eyebrow');
-  var heroH1      = document.querySelector('.hero h1');
-  var heroSub     = document.querySelector('.hero__sub');
-  var heroCta     = document.querySelector('.hero__cta');
-  var heroMeta    = document.querySelector('.hero__meta');
+  var heroH1 = document.querySelector('.hero h1');
+  var heroSub = document.querySelector('.hero__sub');
+  var heroCta = document.querySelector('.hero__cta');
+  var heroMeta = document.querySelector('.hero__meta');
 
   if (heroEyebrow) {
     // Trigger hero elements in sequence after a short delay
@@ -107,17 +107,17 @@
     }
 
     triggerHeroEl(heroEyebrow, 180);
-    triggerHeroEl(heroH1,      320);
-    triggerHeroEl(heroSub,     460);
-    triggerHeroEl(heroCta,     580);
-    triggerHeroEl(heroMeta,    680);
+    triggerHeroEl(heroH1, 320);
+    triggerHeroEl(heroSub, 460);
+    triggerHeroEl(heroCta, 580);
+    triggerHeroEl(heroMeta, 680);
   }
 
   /* ================================================================
      PROCESS: animated vertical line draw on scroll
      ================================================================ */
   var processSection = document.querySelector('.process');
-  var lineFill       = document.querySelector('.process__line-fill');
+  var lineFill = document.querySelector('.process__line-fill');
 
   if (processSection && lineFill && !reduced && 'IntersectionObserver' in window) {
     var processObserver = new IntersectionObserver(function (entries) {
@@ -137,7 +137,7 @@
   /* ================================================================
      WORK PAGE: category filtering
      ================================================================ */
-  var filters  = document.querySelectorAll('.filter');
+  var filters = document.querySelectorAll('.filter');
   var projects = document.querySelectorAll('[data-category]');
 
   filters.forEach(function (button) {
@@ -158,10 +158,10 @@
   /* ================================================================
      WORK PAGE: project detail panel
      ================================================================ */
-  var detail      = document.getElementById('project-detail');
+  var detail = document.getElementById('project-detail');
   var detailTitle = detail && detail.querySelector('[data-detail-title]');
-  var detailCat   = detail && detail.querySelector('[data-detail-category]');
-  var detailText  = detail && detail.querySelector('[data-detail-text]');
+  var detailCat = detail && detail.querySelector('[data-detail-category]');
+  var detailText = detail && detail.querySelector('[data-detail-text]');
   var detailScope = detail && detail.querySelector('[data-detail-scope]');
 
   if (detail) {
@@ -172,8 +172,8 @@
         if (!card) return;
 
         if (detailTitle) detailTitle.textContent = card.getAttribute('data-title') || '';
-        if (detailCat)   detailCat.textContent   = card.getAttribute('data-cat-label') || '';
-        if (detailText)  detailText.textContent  = card.getAttribute('data-detail') || '';
+        if (detailCat) detailCat.textContent = card.getAttribute('data-cat-label') || '';
+        if (detailText) detailText.textContent = card.getAttribute('data-detail') || '';
 
         if (detailScope) {
           detailScope.innerHTML = '';
@@ -223,9 +223,9 @@
   }
 
   /* ================================================================
-     CONTACT FORM VALIDATION
+     CONTACT FORM VALIDATION & SUBMISSION
      ================================================================ */
-  var form   = document.getElementById('contact-form');
+  var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
 
   if (form) {
@@ -241,14 +241,24 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      console.log('1. Submit event triggered!'); // <--- Debug log
       var valid = true;
+
+      if (!valid) {
+        console.log('2. Validation failed on one of the fields!'); // <--- Debug log
+        var first = form.querySelector('.field.has-error input, .field.has-error select, .field.has-error textarea');
+        if (first) first.focus();
+        return;
+      }
+
+      console.log('3. Validation passed! Sending fetch request...'); // <--- Debug log
 
       form.querySelectorAll('.field').forEach(function (field) {
         var input = field.querySelector('input, select, textarea');
         if (!input) return;
         clearError(field);
 
-        var val      = input.value.trim();
+        var val = input.value.trim();
         var required = input.hasAttribute('required');
 
         if (required && !val) {
@@ -278,11 +288,56 @@
         return;
       }
 
-      if (status) {
-        status.classList.add('is-visible');
-        status.textContent = 'Thank you — your enquiry has been captured. We\'ll be in touch shortly.';
-      }
-      form.reset();
+      // Submission UI state
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      var formData = new FormData(form);
+
+      fetch(form.action || 'https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+        .then(function (res) {
+          console.log('Response status code:', res.status);
+          return res.json();
+        })
+
+        .then(function (data) {
+          console.log('Web3Forms returned data:', data);
+
+          if (data.success) {
+            if (status) {
+              status.classList.add('is-visible');
+              status.textContent = 'Thank you — your enquiry has been sent. We\'ll be in touch shortly.';
+              status.style.color = 'var(--electric-cyan, #00f2fe)';
+            }
+            form.reset();
+          } else {
+            if (status) {
+              status.classList.add('is-visible');
+              status.textContent = data.message || 'Something went wrong. Please try again.';
+              status.style.color = '#ff6b6b';
+            }
+          }
+        })
+        .catch(function (err) {
+          console.error('Fetch caught an error:', err);
+          if (status) {
+            status.classList.add('is-visible');
+            status.textContent = 'Unable to send. Please email us at modelsoftwares@outlook.com';
+            status.style.color = '#ff6b6b';
+          }
+        })
+        .finally(function () {
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+        });
     });
 
     form.addEventListener('input', function (e) {
@@ -301,7 +356,7 @@
   if (!reduced && !isTouchDevice) {
     var MAX_ROTATE_X = 8;   // degrees
     var MAX_ROTATE_Y = 12;  // degrees
-    var PERSPECTIVE  = 900; // px
+    var PERSPECTIVE = 900; // px
 
     document.querySelectorAll('.card').forEach(function (card) {
       // Inject shine element once
@@ -310,12 +365,12 @@
       card.appendChild(shine);
 
       function onMove(e) {
-        var rect   = card.getBoundingClientRect();
+        var rect = card.getBoundingClientRect();
         // Normalised position within card: -1..+1
-        var nx = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
-        var ny = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+        var nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        var ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
 
-        var rotateY =  nx * MAX_ROTATE_Y;
+        var rotateY = nx * MAX_ROTATE_Y;
         var rotateX = -ny * MAX_ROTATE_X;
 
         card.style.transform =
@@ -325,8 +380,8 @@
           'translateZ(10px) translateY(-5px)';
 
         // Shine follows cursor — convert to percentage for CSS property
-        var shineX = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1) + '%';
-        var shineY = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1) + '%';
+        var shineX = ((e.clientX - rect.left) / rect.width * 100).toFixed(1) + '%';
+        var shineY = ((e.clientY - rect.top) / rect.height * 100).toFixed(1) + '%';
         shine.style.setProperty('--shine-x', shineX);
         shine.style.setProperty('--shine-y', shineY);
 
@@ -347,8 +402,8 @@
         card._tiltTimer = t;
       }
 
-      card.addEventListener('mousemove',  onMove,   { passive: true });
-      card.addEventListener('mouseleave', onLeave,  { passive: true });
+      card.addEventListener('mousemove', onMove, { passive: true });
+      card.addEventListener('mouseleave', onLeave, { passive: true });
       card.addEventListener('mouseenter', function () {
         clearTimeout(card._tiltTimer);
         card.classList.remove('tilt-return');

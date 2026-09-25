@@ -1,568 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Model Softwares | Custom Software Development</title>
-<meta name="description" content="Model Softwares builds custom software, cloud systems, web applications and practical AI solutions designed around the way your business actually works.">
-<meta name="theme-color" content="#070f1f">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Model Softwares | Custom Software Development">
-<meta property="og:description" content="Custom software, cloud systems, web applications and practical AI solutions, engineered around your business.">
-<meta property="og:image" content="images/newlogo.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="images/newlogo-display.png" type="image/png">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Softwares | Custom Software Development</title>
+  <meta name="description"
+    content="Model Softwares builds custom software, cloud systems, web applications and practical AI solutions designed around the way your business actually works.">
+  <meta name="theme-color" content="#070f1f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Model Softwares | Custom Software Development">
+  <meta property="og:description"
+    content="Custom software, cloud systems, web applications and practical AI solutions, engineered around your business.">
+  <meta property="og:image" content="images/newlogo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/newlogo-display.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- Scroll progress indicator -->
-<div class="scroll-progress" aria-hidden="true"></div>
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-<header class="site-header">
-  <div class="wrap">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html">
-        <picture>
-          <source srcset="images/newlogo-display.webp" type="image/webp">
-          <img src="images/newlogo-display.png" alt="Model Softwares logo" width="80" height="58">
-        </picture>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <picture>
+            <source srcset="images/newlogo-display.webp" type="image/webp">
+            <img src="images/newlogo-display.png" alt="Model Softwares logo" width="80" height="58">
+          </picture>
 
-        <span>Model Softwares<small>Software Engineering</small></span>
-      </a>
+          <span>Model Softwares<small>Software Engineering</small></span>
+        </a>
 
-      <ul class="nav-links">
+        <ul class="nav-links">
+          <li><a href="index.html" class="is-active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a class="btn btn--primary btn--sm" href="contact.html">Start a Project</a>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-controls="mobile-menu"
+          aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
         <li><a href="index.html" class="is-active">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-
-      <div class="nav-actions">
-        <a class="btn btn--primary btn--sm" href="contact.html">Start a Project</a>
+      <div class="wrap">
+        <a class="btn btn--primary" href="contact.html">Start a Project</a>
       </div>
-
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
-
-  <div class="mobile-menu" id="mobile-menu">
-    <ul>
-      <li><a href="index.html" class="is-active">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="wrap">
-      <a class="btn btn--primary" href="contact.html">Start a Project</a>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
+  <main>
 
-  <!-- ============================================================
+    <!-- ============================================================
        HERO
        ============================================================ -->
-  <section class="hero">
-    <!-- 3D canvas mount point — Three.js appends canvas here -->
-    <div class="hero__canvas-wrap" aria-hidden="true"></div>
-    <!-- Static CSS fallback (shown when 3D not loaded) -->
-    <div class="hero__fallback" aria-hidden="true"></div>
-    <!-- Edge vignette to blend 3D into background -->
-    <div class="hero__vignette" aria-hidden="true"></div>
-    <!-- Subtle grid overlay -->
-    <div class="grid-lines" aria-hidden="true"></div>
+    <section class="hero">
+      <!-- 3D canvas mount point — Three.js appends canvas here -->
+      <div class="hero__canvas-wrap" aria-hidden="true"></div>
+      <!-- Static CSS fallback (shown when 3D not loaded) -->
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <!-- Edge vignette to blend 3D into background -->
+      <div class="hero__vignette" aria-hidden="true"></div>
+      <!-- Subtle grid overlay -->
+      <div class="grid-lines" aria-hidden="true"></div>
 
-    <div class="wrap">
-      <div class="hero__inner">
+      <div class="wrap">
+        <div class="hero__inner">
 
-        <div class="hero__eyebrow">
-          <span class="hero__eyebrow-dot"></span>
-          Software Engineering Company
-          <span class="hero__cursor" aria-hidden="true"></span>
+          <div class="hero__eyebrow">
+            <span class="hero__eyebrow-dot"></span>
+            Software Engineering Company
+            <span class="hero__cursor" aria-hidden="true"></span>
+          </div>
+
+          <h1>
+            Built for business.<br>
+            <span class="accent">Powered by software.</span>
+          </h1>
+
+          <p class="hero__sub">
+            We engineer custom software, cloud systems and digital products
+            designed around the way your business actually operates.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="contact.html">Start a Project →</a>
+            <a class="btn btn--ghost" href="services.html">Explore Services</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <strong>9+</strong>
+              <span>Service Areas</span>
+            </div>
+            <div class="hero__meta-item">
+              <strong>ZA</strong>
+              <span>South Africa Based</span>
+            </div>
+            <div class="hero__meta-item">
+              <strong>100%</strong>
+              <span>Custom Built</span>
+            </div>
+            <div class="hero__meta-item">
+              <strong>Full&#8209;Stack</strong>
+              <span>End-to-End Delivery</span>
+            </div>
+          </div>
+
         </div>
-
-        <h1>
-          Built for business.<br>
-          <span class="accent">Powered by software.</span>
-        </h1>
-
-        <p class="hero__sub">
-          We engineer custom software, cloud systems and digital products
-          designed around the way your business actually operates.
-        </p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="contact.html">Start a Project →</a>
-          <a class="btn btn--ghost" href="services.html">Explore Services</a>
-        </div>
-
-        <div class="hero__meta">
-          <div class="hero__meta-item">
-            <strong>9+</strong>
-            <span>Service Areas</span>
-          </div>
-          <div class="hero__meta-item">
-            <strong>ZA</strong>
-            <span>South Africa Based</span>
-          </div>
-          <div class="hero__meta-item">
-            <strong>100%</strong>
-            <span>Custom Built</span>
-          </div>
-          <div class="hero__meta-item">
-            <strong>Full&#8209;Stack</strong>
-            <span>End-to-End Delivery</span>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
+    <!-- ============================================================
        SERVICES
        ============================================================ -->
-  <section class="section section--dark" id="services">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Services</span>
-        <h2>What we build</h2>
-        <p class="lead">Engineering services covering the full lifecycle of a business system — from the first conversation to long-term support.</p>
+    <section class="section section--dark" id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Services</span>
+          <h2>What we build</h2>
+          <p class="lead">Engineering services covering the full lifecycle of a business system — from the first
+            conversation to long-term support.</p>
+        </div>
+
+        <div class="grid grid--3">
+
+          <article class="card reveal">
+            <div class="card__num">01 — Software</div>
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M9 18l-6-6 6-6M15 6l6 6-6 6" />
+              </svg>
+            </div>
+            <h3>Custom Software</h3>
+            <p>Purpose-built software designed around your exact business processes — not the other way around.</p>
+            <a class="link-more" href="services.html#custom-software">Learn more →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">02 — Cloud</div>
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 18a4 4 0 010-8 6 6 0 0111.6-1.6A4.5 4.5 0 0118 18H6z" />
+              </svg>
+            </div>
+            <h3>Cloud Solutions</h3>
+            <p>Reliable cloud-based systems built for accessibility, resilience and horizontal scale.</p>
+            <a class="link-more" href="services.html#cloud">Learn more →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">03 — AI</div>
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="5" y="5" width="14" height="14" rx="2" />
+                <path d="M9 9h6v6H9zM12 2v3M12 19v3M2 12h3M19 12h3" />
+              </svg>
+            </div>
+            <h3>AI Solutions</h3>
+            <p>Practical AI integrations and intelligent automation built around real business workflows.</p>
+            <a class="link-more" href="services.html#ai">Learn more →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">04 — Web</div>
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18" />
+              </svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Professional websites and digital experiences engineered for performance and conversion.</p>
+            <a class="link-more" href="services.html#web">Learn more →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">05 — Apps</div>
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <path d="M3 9h18M8 22h8" />
+              </svg>
+            </div>
+            <h3>Web Applications</h3>
+            <p>Interactive, data-driven web applications and internal business tools built to scale.</p>
+            <a class="link-more" href="services.html#web-apps">Learn more →</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__num">06 — Automation</div>
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="6" cy="6" r="2.5" />
+                <circle cx="18" cy="18" r="2.5" />
+                <path d="M8.5 6H15a3 3 0 013 3v6.5M6 8.5V15a3 3 0 003 3h6.5" />
+              </svg>
+            </div>
+            <h3>Business Automation</h3>
+            <p>Systems that eliminate repetitive work and improve operational throughput across your teams.</p>
+            <a class="link-more" href="services.html#automation">Learn more →</a>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="grid grid--3">
-
-        <article class="card reveal">
-          <div class="card__num">01 — Software</div>
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg>
-          </div>
-          <h3>Custom Software</h3>
-          <p>Purpose-built software designed around your exact business processes — not the other way around.</p>
-          <a class="link-more" href="services.html#custom-software">Learn more →</a>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__num">02 — Cloud</div>
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18a4 4 0 010-8 6 6 0 0111.6-1.6A4.5 4.5 0 0118 18H6z"/></svg>
-          </div>
-          <h3>Cloud Solutions</h3>
-          <p>Reliable cloud-based systems built for accessibility, resilience and horizontal scale.</p>
-          <a class="link-more" href="services.html#cloud">Learn more →</a>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__num">03 — AI</div>
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
-          </div>
-          <h3>AI Solutions</h3>
-          <p>Practical AI integrations and intelligent automation built around real business workflows.</p>
-          <a class="link-more" href="services.html#ai">Learn more →</a>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__num">04 — Web</div>
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>
-          </div>
-          <h3>Web Development</h3>
-          <p>Professional websites and digital experiences engineered for performance and conversion.</p>
-          <a class="link-more" href="services.html#web">Learn more →</a>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__num">05 — Apps</div>
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 22h8"/></svg>
-          </div>
-          <h3>Web Applications</h3>
-          <p>Interactive, data-driven web applications and internal business tools built to scale.</p>
-          <a class="link-more" href="services.html#web-apps">Learn more →</a>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__num">06 — Automation</div>
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H15a3 3 0 013 3v6.5M6 8.5V15a3 3 0 003 3h6.5"/></svg>
-          </div>
-          <h3>Business Automation</h3>
-          <p>Systems that eliminate repetitive work and improve operational throughput across your teams.</p>
-          <a class="link-more" href="services.html#automation">Learn more →</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        PHILOSOPHY
        ============================================================ -->
-  <section class="section">
-    <div class="grid-lines" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Philosophy</span>
-        <h2 class="philosophy__quote">
-          Software should solve <span class="accent">problems</span>, not create them.
-        </h2>
-        <p class="lead">Model Softwares builds technology that is practical, reliable and aligned with how businesses actually operate. Every system we deliver should reduce friction, clarify information and make daily work simpler.</p>
-      </div>
+    <section class="section">
+      <div class="grid-lines" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Philosophy</span>
+          <h2 class="philosophy__quote">
+            Software should solve <span class="accent">problems</span>, not create them.
+          </h2>
+          <p class="lead">Model Softwares builds technology that is practical, reliable and aligned with how businesses
+            actually operate. Every system we deliver should reduce friction, clarify information and make daily work
+            simpler.</p>
+        </div>
 
-      <div class="grid grid--4">
-        <div class="principle reveal">
-          <h3>Purpose-built</h3>
-          <p>Built around the actual business rather than forcing a business into a generic product.</p>
-        </div>
-        <div class="principle reveal">
-          <h3>Connected</h3>
-          <p>Systems that share data instead of duplicating it — one source of truth across the organisation.</p>
-        </div>
-        <div class="principle reveal">
-          <h3>Scalable</h3>
-          <p>Architecture that grows with the business without requiring a full rebuild at scale.</p>
-        </div>
-        <div class="principle reveal">
-          <h3>Reliable</h3>
-          <p>Software dependable enough to become the operational backbone of daily work.</p>
+        <div class="grid grid--4">
+          <div class="principle reveal">
+            <h3>Purpose-built</h3>
+            <p>Built around the actual business rather than forcing a business into a generic product.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>Connected</h3>
+            <p>Systems that share data instead of duplicating it — one source of truth across the organisation.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>Scalable</h3>
+            <p>Architecture that grows with the business without requiring a full rebuild at scale.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>Reliable</h3>
+            <p>Software dependable enough to become the operational backbone of daily work.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
+    <!-- ============================================================
        PROCESS
        ============================================================ -->
-  <section class="section section--dark">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Process</span>
-        <h2>How we work</h2>
-        <p class="lead">A structured engineering process with clear checkpoints — so you always know what is being built and why.</p>
+    <section class="section section--dark">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Process</span>
+          <h2>How we work</h2>
+          <p class="lead">A structured engineering process with clear checkpoints — so you always know what is being
+            built and why.</p>
+        </div>
+
+        <div class="process">
+          <div class="process__line" aria-hidden="true">
+            <div class="process__line-fill"></div>
+          </div>
+
+          <div class="process__item reveal">
+            <div class="process__dot" aria-hidden="true"></div>
+            <div class="process__label">
+              <span class="process__num">01 — Discover</span>
+              <h3>Understand</h3>
+            </div>
+            <p>Understand the business context and the problem before proposing a solution. No assumptions.</p>
+          </div>
+
+          <div class="process__item reveal">
+            <div class="process__dot" aria-hidden="true"></div>
+            <div class="process__label">
+              <span class="process__num">02 — Plan</span>
+              <h3>Define</h3>
+            </div>
+            <p>Define the requirements, scope and shape of the solution. Agreed on paper before a line of code is
+              written.</p>
+          </div>
+
+          <div class="process__item reveal">
+            <div class="process__dot" aria-hidden="true"></div>
+            <div class="process__label">
+              <span class="process__num">03 — Design</span>
+              <h3>Design</h3>
+            </div>
+            <p>Design the user experience and the underlying system architecture with the end state in mind.</p>
+          </div>
+
+          <div class="process__item reveal">
+            <div class="process__dot" aria-hidden="true"></div>
+            <div class="process__label">
+              <span class="process__num">04 — Build</span>
+              <h3>Develop</h3>
+            </div>
+            <p>Develop and test the software in reviewable increments with visibility at every stage.</p>
+          </div>
+
+          <div class="process__item reveal">
+            <div class="process__dot" aria-hidden="true"></div>
+            <div class="process__label">
+              <span class="process__num">05 — Launch</span>
+              <h3>Deploy</h3>
+            </div>
+            <p>Deploy the finished solution with full documentation and a structured handover process.</p>
+          </div>
+
+          <div class="process__item reveal">
+            <div class="process__dot" aria-hidden="true"></div>
+            <div class="process__label">
+              <span class="process__num">06 — Support</span>
+              <h3>Maintain</h3>
+            </div>
+            <p>Maintain, monitor and iterate on the system as your business and requirements evolve.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="process">
-        <div class="process__line" aria-hidden="true">
-          <div class="process__line-fill"></div>
-        </div>
-
-        <div class="process__item reveal">
-          <div class="process__dot" aria-hidden="true"></div>
-          <div class="process__label">
-            <span class="process__num">01 — Discover</span>
-            <h3>Understand</h3>
-          </div>
-          <p>Understand the business context and the problem before proposing a solution. No assumptions.</p>
-        </div>
-
-        <div class="process__item reveal">
-          <div class="process__dot" aria-hidden="true"></div>
-          <div class="process__label">
-            <span class="process__num">02 — Plan</span>
-            <h3>Define</h3>
-          </div>
-          <p>Define the requirements, scope and shape of the solution. Agreed on paper before a line of code is written.</p>
-        </div>
-
-        <div class="process__item reveal">
-          <div class="process__dot" aria-hidden="true"></div>
-          <div class="process__label">
-            <span class="process__num">03 — Design</span>
-            <h3>Design</h3>
-          </div>
-          <p>Design the user experience and the underlying system architecture with the end state in mind.</p>
-        </div>
-
-        <div class="process__item reveal">
-          <div class="process__dot" aria-hidden="true"></div>
-          <div class="process__label">
-            <span class="process__num">04 — Build</span>
-            <h3>Develop</h3>
-          </div>
-          <p>Develop and test the software in reviewable increments with visibility at every stage.</p>
-        </div>
-
-        <div class="process__item reveal">
-          <div class="process__dot" aria-hidden="true"></div>
-          <div class="process__label">
-            <span class="process__num">05 — Launch</span>
-            <h3>Deploy</h3>
-          </div>
-          <p>Deploy the finished solution with full documentation and a structured handover process.</p>
-        </div>
-
-        <div class="process__item reveal">
-          <div class="process__dot" aria-hidden="true"></div>
-          <div class="process__label">
-            <span class="process__num">06 — Support</span>
-            <h3>Maintain</h3>
-          </div>
-          <p>Maintain, monitor and iterate on the system as your business and requirements evolve.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        SELECTED WORK
        ============================================================ -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Selected Work</span>
-        <h2>Built to solve real problems.</h2>
-        <p class="lead">A selection of the kinds of systems we build. Contact us to discuss your specific requirements.</p>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Selected Work</span>
+          <h2>Built to solve real problems.</h2>
+          <p class="lead">A selection of the kinds of systems we build. Contact us to discuss your specific
+            requirements.</p>
+        </div>
+
+        <div class="grid grid--3">
+
+          <article class="card project reveal" data-category="business" data-title="Operations Platform"
+            data-cat-label="Business Systems"
+            data-detail="A central operations system replacing a set of disconnected spreadsheets used across scheduling, job management and internal reporting."
+            data-scope="Scheduling module | Job management | Internal reporting | Staff dashboards | Export tooling">
+            <div class="project__thumb">
+              <img src="images/project-1.svg" alt="Operations dashboard interface" loading="lazy">
+              <div class="project__overlay"><span>View Project</span></div>
+            </div>
+            <div class="project__body">
+              <span class="project__cat">Business Systems</span>
+              <h3>Operations Platform</h3>
+              <p>A central system replacing spreadsheets used across scheduling, jobs and reporting.</p>
+              <a class="link-more" href="work.html" data-open-project>View project →</a>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-category="web-apps" data-title="Client Portal"
+            data-cat-label="Web Applications"
+            data-detail="A secure portal giving customers real-time visibility of orders, documents and project progress without requiring direct staff involvement."
+            data-scope="Secure authentication | Order tracking | Document storage | Progress timeline | Notifications">
+            <div class="project__thumb">
+              <img src="images/project-2.svg" alt="Client portal interface" loading="lazy">
+              <div class="project__overlay"><span>View Project</span></div>
+            </div>
+            <div class="project__body">
+              <span class="project__cat">Web Applications</span>
+              <h3>Client Portal</h3>
+              <p>A secure portal giving customers visibility of orders, documents and progress.</p>
+              <a class="link-more" href="work.html" data-open-project>View project →</a>
+            </div>
+          </article>
+
+          <article class="card project reveal" data-category="ecommerce" data-title="Retail Storefront"
+            data-cat-label="E-commerce"
+            data-detail="A fully custom e-commerce storefront with real-time stock management, integrated payments and direct fulfilment connection to back-office tools."
+            data-scope="Product catalogue | Real-time stock | Payment gateway | Fulfilment integration | Order management">
+            <div class="project__thumb">
+              <img src="images/project-3.svg" alt="E-commerce storefront" loading="lazy">
+              <div class="project__overlay"><span>View Project</span></div>
+            </div>
+            <div class="project__body">
+              <span class="project__cat">E-commerce</span>
+              <h3>Retail Storefront</h3>
+              <p>An online store with stock, payments and fulfilment connected to back-office tools.</p>
+              <a class="link-more" href="work.html" data-open-project>View project →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+          <a class="btn btn--ghost" href="work.html">View All Work →</a>
+        </div>
       </div>
+    </section>
 
-      <div class="grid grid--3">
-
-        <article class="card project reveal"
-          data-category="business"
-          data-title="Operations Platform"
-          data-cat-label="Business Systems"
-          data-detail="A central operations system replacing a set of disconnected spreadsheets used across scheduling, job management and internal reporting."
-          data-scope="Scheduling module | Job management | Internal reporting | Staff dashboards | Export tooling">
-          <div class="project__thumb">
-            <img src="images/project-1.svg" alt="Operations dashboard interface" loading="lazy">
-            <div class="project__overlay"><span>View Project</span></div>
-          </div>
-          <div class="project__body">
-            <span class="project__cat">Business Systems</span>
-            <h3>Operations Platform</h3>
-            <p>A central system replacing spreadsheets used across scheduling, jobs and reporting.</p>
-            <a class="link-more" href="work.html" data-open-project>View project →</a>
-          </div>
-        </article>
-
-        <article class="card project reveal"
-          data-category="web-apps"
-          data-title="Client Portal"
-          data-cat-label="Web Applications"
-          data-detail="A secure portal giving customers real-time visibility of orders, documents and project progress without requiring direct staff involvement."
-          data-scope="Secure authentication | Order tracking | Document storage | Progress timeline | Notifications">
-          <div class="project__thumb">
-            <img src="images/project-2.svg" alt="Client portal interface" loading="lazy">
-            <div class="project__overlay"><span>View Project</span></div>
-          </div>
-          <div class="project__body">
-            <span class="project__cat">Web Applications</span>
-            <h3>Client Portal</h3>
-            <p>A secure portal giving customers visibility of orders, documents and progress.</p>
-            <a class="link-more" href="work.html" data-open-project>View project →</a>
-          </div>
-        </article>
-
-        <article class="card project reveal"
-          data-category="ecommerce"
-          data-title="Retail Storefront"
-          data-cat-label="E-commerce"
-          data-detail="A fully custom e-commerce storefront with real-time stock management, integrated payments and direct fulfilment connection to back-office tools."
-          data-scope="Product catalogue | Real-time stock | Payment gateway | Fulfilment integration | Order management">
-          <div class="project__thumb">
-            <img src="images/project-3.svg" alt="E-commerce storefront" loading="lazy">
-            <div class="project__overlay"><span>View Project</span></div>
-          </div>
-          <div class="project__body">
-            <span class="project__cat">E-commerce</span>
-            <h3>Retail Storefront</h3>
-            <p>An online store with stock, payments and fulfilment connected to back-office tools.</p>
-            <a class="link-more" href="work.html" data-open-project>View project →</a>
-          </div>
-        </article>
-
-      </div>
-
-      <div style="margin-top: 40px; text-align: center;">
-        <a class="btn btn--ghost" href="work.html">View All Work →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        TECHNOLOGIES
        ============================================================ -->
-  <section class="section section--carbon">
-    <div class="wrap">
-      <div class="section-head section-head--center reveal">
-        <span class="eyebrow">Capabilities</span>
-        <h2>Technology we work with</h2>
+    <section class="section section--carbon">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Capabilities</span>
+          <h2>Technology we work with</h2>
+        </div>
+
+        <div class="grid grid--4">
+
+          <div class="tech-col reveal">
+            <h3>Frontend</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Responsive UI</span>
+              <span class="tech-tag">Accessibility</span>
+            </div>
+          </div>
+
+          <div class="tech-col reveal">
+            <h3>Backend</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">Authentication</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">Integrations</span>
+            </div>
+          </div>
+
+          <div class="tech-col reveal">
+            <h3>Cloud</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Azure</span>
+              <span class="tech-tag">Managed Hosting</span>
+              <span class="tech-tag">CDN</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">Monitoring</span>
+            </div>
+          </div>
+
+          <div class="tech-col reveal">
+            <h3>Data &amp; AI</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Reporting</span>
+              <span class="tech-tag">Document AI</span>
+              <span class="tech-tag">LLM Integration</span>
+              <span class="tech-tag">Automation</span>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="grid grid--4">
-
-        <div class="tech-col reveal">
-          <h3>Frontend</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">HTML5</span>
-            <span class="tech-tag">CSS3</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Responsive UI</span>
-            <span class="tech-tag">Accessibility</span>
-          </div>
-        </div>
-
-        <div class="tech-col reveal">
-          <h3>Backend</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">REST APIs</span>
-            <span class="tech-tag">GraphQL</span>
-            <span class="tech-tag">Authentication</span>
-            <span class="tech-tag">Microservices</span>
-            <span class="tech-tag">Integrations</span>
-          </div>
-        </div>
-
-        <div class="tech-col reveal">
-          <h3>Cloud</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">AWS</span>
-            <span class="tech-tag">Azure</span>
-            <span class="tech-tag">Managed Hosting</span>
-            <span class="tech-tag">CDN</span>
-            <span class="tech-tag">Serverless</span>
-            <span class="tech-tag">Monitoring</span>
-          </div>
-        </div>
-
-        <div class="tech-col reveal">
-          <h3>Data &amp; AI</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">Reporting</span>
-            <span class="tech-tag">Document AI</span>
-            <span class="tech-tag">LLM Integration</span>
-            <span class="tech-tag">Automation</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        CTA
        ============================================================ -->
-  <section class="cta">
-    <!-- WebGL particle field — fades in when cta3d.js initialises -->
-    <div class="cta__canvas-wrap" aria-hidden="true"></div>
-    <div class="grid-lines" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="cta__inner reveal">
-        <span class="eyebrow" style="justify-content: center;">Let's build</span>
-        <h2>Have a problem worth solving?</h2>
-        <p>Tell us what you're building, improving or trying to solve. We'll figure out the right approach together.</p>
-        <a class="btn btn--primary" href="contact.html">Start a Project →</a>
+    <section class="cta">
+      <!-- WebGL particle field — fades in when cta3d.js initialises -->
+      <div class="cta__canvas-wrap" aria-hidden="true"></div>
+      <div class="grid-lines" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="cta__inner reveal">
+          <span class="eyebrow" style="justify-content: center;">Let's build</span>
+          <h2>Have a problem worth solving?</h2>
+          <p>Tell us what you're building, improving or trying to solve. We'll figure out the right approach together.
+          </p>
+          <a class="btn btn--primary" href="contact.html">Start a Project →</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+  </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a class="brand" href="index.html">
-          <picture>
-          <source srcset="images/newlogo-display.webp" type="image/webp">
-          <img src="images/newlogo-display.png" alt="Model Softwares logo" width="80" height="58">
-        </picture>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html">
+            <picture>
+              <source srcset="images/newlogo-display.webp" type="image/webp">
+              <img src="images/newlogo-display.png" alt="Model Softwares logo" width="80" height="58">
+            </picture>
 
-        <span>Model Softwares<small>Software Engineering</small></span>
-        </a>
-        <p>A software engineering company building custom software, cloud systems and business tools designed around real operations.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.37 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM3.56 20.45h3.56V9H3.56v11.45z"/></svg>
+            <span>Model Softwares<small>Software Engineering</small></span>
           </a>
-          <a href="#" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.114 2.51.334 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
-          </a>
-          <a href="#" aria-label="X (Twitter)">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
+          <p>A software engineering company building custom software, cloud systems and business tools designed around
+            real operations.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/model-softwares/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.37 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM3.56 20.45h3.56V9H3.56v11.45z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/modelsoftwares/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61594095338224#" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#custom-software">Custom Software</a></li>
+            <li><a href="services.html#web-apps">Web Applications</a></li>
+            <li><a href="services.html#cloud">Cloud Solutions</a></li>
+            <li><a href="services.html#ai">AI Solutions</a></li>
+            <li><a href="services.html#automation">Automation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul>
         </div>
       </div>
 
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html#custom-software">Custom Software</a></li>
-          <li><a href="services.html#web-apps">Web Applications</a></li>
-          <li><a href="services.html#cloud">Cloud Solutions</a></li>
-          <li><a href="services.html#ai">AI Solutions</a></li>
-          <li><a href="services.html#automation">Automation</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Model Softwares. All rights reserved.</span>
+        <span class="mono">// Built for business. Powered by software.</span>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <span>&copy; <span id="year">2026</span> Model Softwares. All rights reserved.</span>
-      <span class="mono">// Built for business. Powered by software.</span>
-    </div>
-  </div>
-</footer>
+  <script src="js/script.js"></script>
 
-<script src="js/script.js"></script>
+  <!-- Lazy-load 3D hero — only on this page, only when supported -->
+  <script>
+    (function () {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var conn = navigator.connection;
+      var slow = conn && (conn.saveData || conn.effectiveType === '2g');
 
-<!-- Lazy-load 3D hero — only on this page, only when supported -->
-<script>
-(function () {
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var conn    = navigator.connection;
-  var slow    = conn && (conn.saveData || conn.effectiveType === '2g');
+      if (!reduced && !slow) {
+        function loadScript(src, delay) {
+          var s = document.createElement('script');
+          s.type = 'module';
+          s.src = src;
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(function () { document.head.appendChild(s); }, { timeout: delay });
+          } else {
+            setTimeout(function () { document.head.appendChild(s); }, delay === 2000 ? 300 : 900);
+          }
+        }
 
-  if (!reduced && !slow) {
-    function loadScript(src, delay) {
-      var s = document.createElement('script');
-      s.type = 'module';
-      s.src  = src;
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(function () { document.head.appendChild(s); }, { timeout: delay });
-      } else {
-        setTimeout(function () { document.head.appendChild(s); }, delay === 2000 ? 300 : 900);
+        // hero3d loads first — high priority, short timeout
+        loadScript('js/hero3d.js', 2000);
+
+        // cta3d loads second — lower priority, longer timeout so hero gets GPU first
+        loadScript('js/cta3d.js', 4000);
       }
-    }
+    })();
+  </script>
 
-    // hero3d loads first — high priority, short timeout
-    loadScript('js/hero3d.js', 2000);
-
-    // cta3d loads second — lower priority, longer timeout so hero gets GPU first
-    loadScript('js/cta3d.js', 4000);
-  }
-})();
-</script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "9b3af0b198184dc3a34458d3245c5061"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 
 </body>
+
 </html>
