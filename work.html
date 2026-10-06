@@ -75,7 +75,6 @@
         </div>
       </div>
     </section>
-
     <!-- WORK GRID -->
     <section class="section">
       <div class="wrap">
@@ -93,14 +92,19 @@
         <!-- Project grid -->
         <div class="grid grid--3">
 
+          <!-- Added data-image attribute to each article -->
           <article class="card project reveal" data-category="business" data-title="Operations Platform"
             data-cat-label="Business Systems"
             data-detail="A central operations system replacing a set of disconnected spreadsheets used across scheduling, job management and internal reporting. The platform gave management real-time visibility and eliminated manual re-entry across departments."
-            data-scope="Scheduling module | Job management | Internal reporting | Staff dashboards | Data export | Role-based access control">
-            <div class="project__thumb">
-              <img src="images/project-1.svg" alt="Operations dashboard" loading="lazy">
+            data-scope="Scheduling module | Job management | Internal reporting | Staff dashboards | Data export | Role-based access control"
+            data-image="images/operations-platform.jpg">
+            <!-- Changed to an <a> tag so the overlay is clickable -->
+            <a href="#project-detail" data-open-project class="project__thumb"
+              style="background-color: #1e2128; display: block;">
+              <img src="images/operations-platform.jpg" alt="Operations dashboard" loading="lazy"
+                style="object-fit: contain; padding: 1.5rem; width: 100%; height: 100%; box-sizing: border-box;">
               <div class="project__overlay"><span>View Details</span></div>
-            </div>
+            </a>
             <div class="project__body">
               <span class="project__cat">Business Systems</span>
               <h3>Operations Platform</h3>
@@ -112,11 +116,14 @@
           <article class="card project reveal" data-category="web-apps" data-title="Client Portal"
             data-cat-label="Web Applications"
             data-detail="A secure portal giving customers real-time visibility of their orders, documents and project progress. Reduced inbound status enquiries significantly and improved client confidence throughout the delivery process."
-            data-scope="Secure authentication | Order tracking | Document storage | Progress timeline | Email notifications | Mobile-responsive">
-            <div class="project__thumb">
-              <img src="images/project-2.svg" alt="Client portal" loading="lazy">
+            data-scope="Secure authentication | Order tracking | Document storage | Progress timeline | Email notifications | Mobile-responsive"
+            data-image="images/client-platform.jpg">
+            <a href="#project-detail" data-open-project class="project__thumb"
+              style="background-color: #1e2128; display: block;">
+              <img src="images/client-platform.jpg" alt="Client portal" loading="lazy"
+                style="object-fit: contain; padding: 1.5rem; width: 100%; height: 100%; box-sizing: border-box;">
               <div class="project__overlay"><span>View Details</span></div>
-            </div>
+            </a>
             <div class="project__body">
               <span class="project__cat">Web Applications</span>
               <h3>Client Portal</h3>
@@ -128,11 +135,14 @@
           <article class="card project reveal" data-category="ecommerce" data-title="Retail Storefront"
             data-cat-label="E-commerce"
             data-detail="A fully custom e-commerce storefront with real-time stock management, integrated payment processing and direct fulfilment connection to back-office inventory systems. Replaced a legacy platform with one that matched the business's complex pricing rules."
-            data-scope="Product catalogue | Real-time stock | Payment gateway | Fulfilment integration | Order management | Pricing rules engine">
-            <div class="project__thumb">
-              <img src="images/project-3.svg" alt="Retail storefront" loading="lazy">
+            data-scope="Product catalogue | Real-time stock | Payment gateway | Fulfilment integration | Order management | Pricing rules engine"
+            data-image="images/retail-store.jpg">
+            <a href="#project-detail" data-open-project class="project__thumb"
+              style="background-color: #1e2128; display: block;">
+              <img src="images/retail-store.jpg" alt="Retail storefront" loading="lazy"
+                style="object-fit: contain; padding: 1.5rem; width: 100%; height: 100%; box-sizing: border-box;">
               <div class="project__overlay"><span>View Details</span></div>
-            </div>
+            </a>
             <div class="project__body">
               <span class="project__cat">E-commerce</span>
               <h3>Retail Storefront</h3>
@@ -144,11 +154,14 @@
           <article class="card project reveal" data-category="websites" data-title="Corporate Website"
             data-cat-label="Websites"
             data-detail="A performance-focused corporate website built for a professional services firm. Engineered for Core Web Vitals, accessibility compliance and a structured content management workflow for the internal marketing team."
-            data-scope="Responsive design | CMS integration | SEO structure | Performance optimisation | Accessibility (WCAG 2.1) | Analytics setup">
-            <div class="project__thumb">
-              <img src="images/project-4.svg" alt="Corporate website" loading="lazy">
+            data-scope="Responsive design | CMS integration | SEO structure | Performance optimisation | Accessibility (WCAG 2.1) | Analytics setup"
+            data-image="images/corporate-site.jpg">
+            <a href="#project-detail" data-open-project class="project__thumb"
+              style="background-color: #1e2128; display: block;">
+              <img src="images/corporate-site.jpg" alt="Corporate website" loading="lazy"
+                style="object-fit: contain; padding: 1.5rem; width: 100%; height: 100%; box-sizing: border-box;">
               <div class="project__overlay"><span>View Details</span></div>
-            </div>
+            </a>
             <div class="project__body">
               <span class="project__cat">Websites</span>
               <h3>Corporate Website</h3>
@@ -160,11 +173,14 @@
           <article class="card project reveal" data-category="software" data-title="Inventory Management System"
             data-cat-label="Custom Software"
             data-detail="A custom inventory management system replacing a legacy desktop tool used across multiple warehouse locations. Real-time stock levels, multi-location support and automated low-stock alerts reduced stock-outs and manual counting overhead."
-            data-scope="Multi-location stock tracking | Barcode scanning | Purchase order management | Low-stock alerts | Supplier management | Reporting">
-            <div class="project__thumb">
-              <img src="images/project-5.svg" alt="Inventory system" loading="lazy">
+            data-scope="Multi-location stock tracking | Barcode scanning | Purchase order management | Low-stock alerts | Supplier management | Reporting"
+            data-image="images/inventory-management.jpg">
+            <a href="#project-detail" data-open-project class="project__thumb"
+              style="background-color: #1e2128; display: block;">
+              <img src="images/inventory-management.jpg" alt="Inventory system" loading="lazy"
+                style="object-fit: contain; padding: 1.5rem; width: 100%; height: 100%; box-sizing: border-box;">
               <div class="project__overlay"><span>View Details</span></div>
-            </div>
+            </a>
             <div class="project__body">
               <span class="project__cat">Custom Software</span>
               <h3>Inventory System</h3>
@@ -176,11 +192,14 @@
           <article class="card project reveal" data-category="business" data-title="Automated Reporting Suite"
             data-cat-label="Business Systems"
             data-detail="An automated reporting pipeline replacing a manual weekly process that took a senior analyst several hours. Reports are now generated, formatted and distributed automatically on schedule — with data pulled from multiple source systems."
-            data-scope="Data aggregation | Automated scheduling | PDF report generation | Email distribution | Multi-source integration | Dashboard view">
-            <div class="project__thumb">
-              <img src="images/project-6.svg" alt="Automated reporting" loading="lazy">
+            data-scope="Data aggregation | Automated scheduling | PDF report generation | Email distribution | Multi-source integration | Dashboard view"
+            data-image="images/reporting-suite.jpg">
+            <a href="#project-detail" data-open-project class="project__thumb"
+              style="background-color: #1e2128; display: block;">
+              <img src="images/reporting-suite.jpg" alt="Automated reporting" loading="lazy"
+                style="object-fit: contain; padding: 1.5rem; width: 100%; height: 100%; box-sizing: border-box;">
               <div class="project__overlay"><span>View Details</span></div>
-            </div>
+            </a>
             <div class="project__body">
               <span class="project__cat">Business Systems</span>
               <h3>Automated Reporting</h3>
@@ -192,8 +211,66 @@
         </div>
 
         <!-- Project detail panel -->
+        <style>
+          .detail-preview-box {
+            background-color: #11151c;
+            /* Deep charcoal grey */
+            padding: 1.25rem;
+            /* Tighter padding so it acts like a frame */
+            margin: 0 auto 2.5rem auto;
+            /* Centers the box in the panel */
+            width: fit-content;
+            /* Forces the box to shrink-wrap the image */
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 10px 30px rgba(0, 0, 0, 0.4);
+          }
+
+          .detail-preview-box img {
+            display: block;
+            max-width: 100%;
+            max-height: 320px;
+            /* Slightly taller since the frame is tighter */
+            width: auto;
+            border-radius: 6px;
+
+            /* Crisp subtle edge on the image itself */
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+            /* Initial state for the animation */
+            opacity: 0;
+            transform: translateY(15px) scale(0.96);
+            filter: blur(4px);
+          }
+
+          @keyframes smoothReveal {
+            0% {
+              opacity: 0;
+              transform: translateY(15px) scale(0.96);
+              filter: blur(4px);
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+              filter: blur(0);
+            }
+          }
+
+          /* Triggers smoothly every time the panel opens */
+          .project-detail.is-open .detail-preview-box img {
+            animation: smoothReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: 0.1s;
+          }
+        </style>
+
         <div id="project-detail" class="project-detail" role="region" aria-label="Project details" aria-live="polite">
           <button class="project-detail__close" aria-label="Close project detail">✕ Close</button>
+
+          <div class="detail-preview-box">
+            <img src="" alt="Project Preview" data-detail-image>
+          </div>
+
           <span class="project-detail__cat" data-detail-category></span>
           <h3 data-detail-title></h3>
           <p data-detail-text></p>
@@ -203,22 +280,6 @@
             <a class="btn btn--primary btn--sm" href="contact.html">Discuss a Similar Project</a>
           </div>
         </div>
-
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <div class="grid-lines" aria-hidden="true"></div>
-      <div class="wrap">
-        <div class="cta__inner reveal">
-          <span class="eyebrow" style="justify-content: center;">Let's build</span>
-          <h2>Have a problem worth solving?</h2>
-          <p>Tell us what you're building, improving or trying to solve. We'll figure out the right approach together.
-          </p>
-          <a class="btn btn--primary" href="contact.html">Start a Project →</a>
-        </div>
-      </div>
     </section>
 
   </main>
@@ -295,6 +356,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- IMAGE LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox__close" aria-label="Close image">✕</button>
+    <img src="" alt="Enlarged preview" class="lightbox__image">
+  </div>
 
   <script src="js/script.js"></script>
 

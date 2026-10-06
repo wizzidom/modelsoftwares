@@ -163,6 +163,7 @@
   var detailCat = detail && detail.querySelector('[data-detail-category]');
   var detailText = detail && detail.querySelector('[data-detail-text]');
   var detailScope = detail && detail.querySelector('[data-detail-scope]');
+  var detailImage = detail && detail.querySelector('[data-detail-image]'); // <-- NEW
 
   if (detail) {
     document.querySelectorAll('[data-open-project]').forEach(function (link) {
@@ -174,6 +175,7 @@
         if (detailTitle) detailTitle.textContent = card.getAttribute('data-title') || '';
         if (detailCat) detailCat.textContent = card.getAttribute('data-cat-label') || '';
         if (detailText) detailText.textContent = card.getAttribute('data-detail') || '';
+        if (detailImage) detailImage.src = card.getAttribute('data-image') || ''; // <-- NEW
 
         if (detailScope) {
           detailScope.innerHTML = '';
@@ -243,15 +245,6 @@
       e.preventDefault();
       console.log('1. Submit event triggered!'); // <--- Debug log
       var valid = true;
-
-      if (!valid) {
-        console.log('2. Validation failed on one of the fields!'); // <--- Debug log
-        var first = form.querySelector('.field.has-error input, .field.has-error select, .field.has-error textarea');
-        if (first) first.focus();
-        return;
-      }
-
-      console.log('3. Validation passed! Sending fetch request...'); // <--- Debug log
 
       form.querySelectorAll('.field').forEach(function (field) {
         var input = field.querySelector('input, select, textarea');
@@ -416,5 +409,77 @@
      ================================================================ */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ================================================================
+     LIGHTBOX FOR DETAIL IMAGES
+     ================================================================ */
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = lightbox ? lightbox.querySelector('.lightbox__image') : null;
+  var lightboxClose = lightbox ? lightbox.querySelector('.lightbox__close') : null;
+  var detailImage = document.querySelector('[data-detail-image]');
+
+  if (lightbox && detailImage) {
+    // Open lightbox on image click
+    detailImage.addEventListener('click', function () {
+      if (this.src) {
+        lightboxImg.src = this.src;
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    });
+
+    // Close lightbox functions
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = ''; // Restore scrolling
+
+      // Clear the image source after the fade-out animation finishes
+      setTimeout(function () { lightboxImg.src = ''; }, 400);
+    }
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    // Close on clicking the dark background outside the image
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  }
+
+  /* ================================================================
+     AUTO-OPEN PROJECT FROM URL HASH
+     ================================================================ */
+  window.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash && detail) {
+      // Remove the '#' and format the hash (e.g. "operations-platform")
+      var hash = window.location.hash.substring(1).toLowerCase();
+      var projectCards = document.querySelectorAll('.card.project');
+
+      projectCards.forEach(function (card) {
+        // Convert the card's data-title to the same format (e.g. "Operations Platform" -> "operations-platform")
+        var title = (card.getAttribute('data-title') || '').toLowerCase().replace(/\s+/g, '-');
+
+        if (title === hash) {
+          var trigger = card.querySelector('[data-open-project]');
+          if (trigger) {
+            // A slight delay ensures the page is fully rendered before triggering the scroll/open animation
+            setTimeout(function () {
+              trigger.click();
+            }, 150);
+          }
+        }
+      });
+    }
+  });
 
 })();
